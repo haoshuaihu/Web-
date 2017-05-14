@@ -1,0 +1,23 @@
+div{
+	background-image: url(img/bj.png);
+	background-repeat: no-repeat;
+	height: 400px;
+	width: 300px;
+}
+ul{
+	list-style-type: none;
+	line-height: 40px;
+    margin-left: -35px;
+    
+
+}
+li{
+	background-image: url(img/baibiaoti.png);
+	background-repeat: no-repeat;
+	margin: 10px;
+	text-align: center;
+	width: 170px;
+}
+.c1{
+	background-image: url(img/lvbiaoti.png);
+}
