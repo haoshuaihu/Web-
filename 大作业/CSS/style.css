@@ -1,0 +1,109 @@
+
+.a1{
+	background-image: url(../images/banner.jpg);
+	height: 240px;
+}
+.a1 img{
+	opacity: 0.4;
+	margin-left: -40px;
+}
+.a2 ul li{
+	float: left;
+	height: 40px;
+	list-style-type: none;
+}
+.a2 ul li a{
+	color: #606060;
+	font-size: 20px;
+}
+.a2 ul li a:link{
+	text-decoration: none;
+}
+.a2 ul li a:hover{
+	text-decoration: underline;
+	color: 	#F0F0F0;
+}
+.a2{
+	background-color: #303030;
+	height: 40px;
+	margin-top: -15px;
+}
+.a3{
+	position: absolute;
+	left: 900px;
+}
+.a3 a{
+	font-size: 25px;
+	color:#989898;
+}
+.a3 a:link{
+	text-decoration: none;
+}
+.a3 a:hover{
+	text-decoration: underline;
+	color: #F0F0F0;
+}
+.a3 input{
+	background-color: 	#D8D8D8;
+	height: 25px;
+	width: 160px;
+}
+.b1{
+	font-size: 20px;
+	position: absolute;
+	left: 150px;
+	top: 350px;
+}
+
+.b0{
+	background-image: url(../images/背景2.gif) ;
+	height: 700px;
+	color: 	#E0E0E0;
+}
+.b2{
+	font-size: 18px;
+	position: absolute;
+	top: 370px;
+	left: 130px;
+}
+
+.c1 input{
+	height: 20px;
+	width: 250px;
+}
+.c1{
+	font-size: 20px;
+	position: absolute;
+	right: 250px;
+	top: 350px;
+
+}
+.c2{
+	font-size: 20px;
+	position: absolute;
+	right: 260px;
+	top: 480px;
+}
+.c2 input{
+	width: 70px;
+}
+.q1{
+	position: absolute;
+	right: 350px;
+	top: 650px;
+}
+.q2{
+	width: 400px;
+	position: absolute;
+	right: 170px;
+	top: 700px;
+}
+.z1{
+	background-image: url(../images/背景5.jpg) ;
+	height: 100PX;
+}
+.z2{
+	color: white;
+	position: absolute;
+	left: 500px;
+}
