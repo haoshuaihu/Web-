@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		p{background-image: url(images/bg.jpg);background-repeat: repeat;}
+		.last{position: absolute;left: 460px;}
+		.Images img{width: 25px;height: 25px;}
+		.showing{display: none;}
+	</style>
+</head>
+<body>
+		<p width: 210px;">宝贝与描述相符（打分匿名）</p>
+		<div class="Images">
+			<img class="Img" src="images/star0.png">
+			<img class="Img" src="images/star0.png">
+			<img class="Img" src="images/star0.png">
+			<img class="Img" src="images/star0.png">
+			<img class="Img" src="images/star0.png">
+		</div>
+		<div id="first"><textarea cols ="80" rows="5"></textarea></div>
+		<div class="showing"><textarea cols ="80" rows="5">too bad</textarea></div>
+		<div class="showing"><textarea cols ="80" rows="5">bad</textarea></div>
+		<div class="showing"><textarea cols ="80" rows="5">Just so so</textarea></div>
+		<div class="showing"><textarea cols ="80" rows="5">good</textarea></div>
+		<div class="showing"><textarea cols ="80" rows="5">very good</textarea></div>
+		<div class="last"><select>
+				<option>公开评论<img src="images/sanjiao.png"></option>
+				<option>匿名评论<img src="images/sanjiao.png"></option>
+			</select>
+		</div>
+</body>
+	<script type="text/javascript">
+		var body=document.getElementsByTagName('body');
+		var con=true;
+		var image=document.getElementsByClassName('Img');
+		var show=document.getElementsByClassName('showing');
+		var first=document.getElementById('first');
+		for(var i=0;i<image.length;i++){
+			image[i].onmouseover=function starPic(){
+				for(var j=0;j<5;j++){
+					image[j].src="images/star0.png";
+				}
+				for(var j=0;image[j-1]!=this;j++){
+					if(j==0||j==1){
+						image[j].src="images/star1.png";
+					}
+					else{
+						image[j].src="images/star2.png";
+					}
+				}
+				con=true;
+			}
+			image[i].onmouseout=function hide(){
+				if(con){
+					for(var j=0;j<5;j++){
+						image[j].src="images/star0.png";
+					}
+					for(var p=0;p<5;p++){
+						show[p].style.display="none";
+						console.log("5")
+					}
+					first.style.display="block";
+				}
+			}
+			image[i].onclick=function(){
+				for(var j=0;image[j-1]!=this;j++){
+					if(j==0||j==1){
+						image[j].src="images/star1.png";
+					}
+					else{
+						image[j].src="images/star2.png";
+					}
+				}
+				con=false;
+				for(var p=0;p<5;p++){
+					show[p].style.display="none";
+				}
+				show[j-1].style.display="block";
+				first.style.display="none";
+			}
+
+		}
+	</script>
+</html>

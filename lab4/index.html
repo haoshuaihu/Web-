@@ -1,0 +1,57 @@
+﻿<!DOCTYPE HTML>
+<html>
+ <head>
+  	<title>图片自动滚动</title>
+  	<style type="text/css">
+  		#picScroll{
+  			white-space: nowrap;
+  			overflow: hidden;
+  			width: 600px;
+  		}
+  	</style>
+ </head>
+ <script type="text/javascript">
+ 	window.onload=function(){
+	   var a =document.getElementById('picScroll');
+	   var wid=document.getElementById('picScroll1').offsetWidth;
+	 	function changeToLeft() {	
+	 		a.scrollLeft+=1;
+		 	if(a.scrollLeft>=wid){
+		 		a.scrollLeft=0;
+		 	}
+	 	}
+	 	var timer=setInterval(changeToLeft,10);
+	 	a.onmouseout=function(){
+	 		var time=setInterval(changeToLeft,10);
+		 	a.onmouseover=function(){
+		 		clearInterval(timer);
+		 		clearInterval(time);
+		 	}
+	 	};
+ 	}
+ </script>
+ <body>
+ <div id="picScroll">
+	<span id="picScroll1">
+		<img src="images/1.jpg" />
+		<img src="images/2.jpg" />
+		<img src="images/3.jpg" />
+		<img src="images/4.jpg" />
+		<img src="images/5.jpg" />
+		<img src="images/6.jpg" />
+		<img src="images/7.jpg" />
+		<img src="images/8.jpg" />
+	</span>
+	<span id="picScroll2">
+		<img src="images/1.jpg" />
+		<img src="images/2.jpg" />
+		<img src="images/3.jpg" />
+		<img src="images/4.jpg" />
+		<img src="images/5.jpg" />
+		<img src="images/6.jpg" />
+		<img src="images/7.jpg" />
+		<img src="images/8.jpg" />
+	</span>
+ </div> 
+ </body>
+</html>
