@@ -20,11 +20,13 @@
 		 		a.scrollLeft=0;
 		 	}
 	 	}
-	 	var timer=setInterval(changeToLeft,10);
+	 	var timer=setInterval(changeToLeft,1);
+	 	a.onmouseover=function(){
+	 		clearInterval(timer);
+	 	}
 	 	a.onmouseout=function(){
-	 		var time=setInterval(changeToLeft,10);
+	 		var time=setInterval(changeToLeft,1);
 		 	a.onmouseover=function(){
-		 		clearInterval(timer);
 		 		clearInterval(time);
 		 	}
 	 	};
